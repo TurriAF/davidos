@@ -1,6 +1,7 @@
 // El CV como documento: se usa en el visor PDF, en la vista simple y al imprimir.
 import { h, t } from './core.js'
 import { toast } from './notify.js'
+import { track } from './analytics.js'
 import { person, skills, timeline, certs, languages } from '../data/cv.js'
 import { getProjects } from './projects.js'
 
@@ -98,6 +99,7 @@ export async function hasPdf() {
 }
 
 export async function downloadCV() {
+  track('cv-descarga', 'Descarga del CV')
   if (await hasPdf()) {
     const a = h('a', { href: PDF_URL, download: PDF_NAME })
     document.body.append(a)

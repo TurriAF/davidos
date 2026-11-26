@@ -76,7 +76,7 @@ export default {
         h(
           'div',
           { class: 'readme-hero' },
-          h('div', { class: 'readme-avatar' }, person.initials),
+          h('div', { class: 'readme-avatar' }, h('img', { src: person.photo, alt: person.name, width: 76, height: 76, decoding: 'async' })),
           h(
             'div',
             {},

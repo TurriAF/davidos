@@ -1,4 +1,5 @@
 import { h, t, sleep, copyText, reducedMotion } from '../os/core.js'
+import { track } from '../os/analytics.js'
 import { person } from '../data/cv.js'
 import { icons } from '../os/icons.js'
 import { toast } from '../os/notify.js'
@@ -11,6 +12,7 @@ async function sendForm(data) {
   const body = new URLSearchParams({ 'form-name': 'contact', 'bot-field': '', ...data }).toString()
   const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body })
   if (!r.ok) throw new Error(String(r.status))
+  track('contacto-enviado', 'Mensaje de contacto enviado')
 }
 
 export default {
@@ -50,7 +52,7 @@ export default {
             await sendForm({ name: draft.name, email: draft.email, company: draft.company, message: draft.message })
             Object.keys(draft).forEach((k) => (draft[k] = ''))
             form.reset()
-            toast({ es: '¡Mensaje enviado! Te responderé lo antes posible.', en: 'Message sent! I will reply as soon as possible.' }, { icon: '✓', tone: 'ok', ms: 5000 })
+            toast({ es: '¡Mensaje enviado! Te responderé lo antes posible.', en: 'Message sent! I’ll get back to you as soon as possible.' }, { icon: '✓', tone: 'ok', ms: 5000 })
           } catch {
             toast({ es: `No se pudo enviar. Escríbeme a ${person.email}`, en: `Could not send. Email me at ${person.email}` }, { icon: '!', tone: 'warn', ms: 7000 })
           } finally {
@@ -143,7 +145,7 @@ export default {
         'div',
         { class: 'pad' },
         h('h2', { class: 'section-title' }, t({ es: 'Hablemos.', en: "Let's talk." })),
-        h('p', { class: 'lead' }, t({ es: '¿Tienes una oferta o un proyecto? Escríbeme por aquí o por el canal que prefieras. Respondo rápido.', en: 'Got a role or a project? Write here or through any channel you prefer. I reply fast.' })),
+        h('p', { class: 'lead' }, t({ es: '¿Tienes una oferta o un proyecto? Escríbeme por aquí o por el canal que prefieras. Respondo rápido.', en: 'Got a role or a project? Write here or through any channel you prefer. I reply quickly.' })),
         form,
         h('h3', { class: 'sub' }, t({ es: 'O directamente', en: 'Or directly' })),
         channels,

@@ -1,5 +1,6 @@
 // Gestor de ventanas de DavidOS: abrir, enfocar, arrastrar, redimensionar, minimizar.
 import { h, t, state, on, emit, isMobile } from './core.js'
+import { track } from './analytics.js'
 import { icon } from './icons.js'
 import { toast } from './notify.js'
 
@@ -72,6 +73,7 @@ export function open(id, opts = {}) {
   }
   if (state.caffeine > 0) decafWarned = false
   build(app, opts)
+  track(`app/${id}`, `Abre ${id}`)
 }
 
 function build(app, opts) {

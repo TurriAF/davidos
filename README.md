@@ -23,7 +23,8 @@ Está pensado para que lo entienda cualquiera: lenguaje claro por defecto, guía
 - **JavaScript vanilla** (sin frameworks) + **Vite**.
 - Gestor de ventanas propio: arrastrar, redimensionar, minimizar y selección múltiple.
 - Fondo generativo en **Canvas** (un grafo de commits animado).
-- Bilingüe ES/EN, responsive, accesible (Lighthouse: accesibilidad, buenas prácticas y SEO al 100).
+- Bilingüe ES/EN, responsive y accesible. Lighthouse: rendimiento 97; accesibilidad, buenas prácticas y SEO al 100.
+- Fuentes alojadas en la propia web (sin Google Fonts) y analítica sin cookies opcional (GoatCounter).
 - Desplegado en **Netlify** con despliegue continuo desde GitHub.
 
 ## Ejecutar en local

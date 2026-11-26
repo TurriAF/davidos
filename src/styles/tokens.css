@@ -23,7 +23,7 @@
   --fun: #ffc266;
 
   --mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
-  --sans: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --sans: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
 
   --r: 12px;
   --shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.7), 0 2px 0 rgba(255, 255, 255, 0.03) inset;

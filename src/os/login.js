@@ -37,7 +37,7 @@ export function login(root, { onSimple, onDownload }) {
     const paint = () => {
       tick()
       content.replaceChildren(
-        h('div', { class: 'login-avatar' }, h('span', {}, person.initials)),
+        h('div', { class: 'login-avatar' }, h('span', {}, h('img', { src: person.photo, alt: person.name, width: 82, height: 82, decoding: 'async' }))),
         h('h1', { class: 'login-name' }, person.name),
         h('p', { class: 'login-role' }, t(person.role), ' · ', h('span', { class: 'ok-dot' }), ' ', t({ es: 'Disponible para incorporación inmediata', en: 'Available to start immediately' })),
         h('p', { class: 'login-ask' }, t({ es: 'Pulsa para entrar en mi portfolio', en: 'Click to enter my portfolio' })),

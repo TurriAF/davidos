@@ -1,3 +1,7 @@
+import '@fontsource-variable/bricolage-grotesque/opsz.css'
+import '@fontsource/ibm-plex-mono/latin-400.css'
+import '@fontsource/ibm-plex-mono/latin-500.css'
+import '@fontsource/ibm-plex-mono/latin-600.css'
 import './styles/tokens.css'
 import './styles/os.css'
 import './styles/windows.css'
@@ -18,6 +22,7 @@ import { initPalette } from './os/palette.js'
 import { initCaffeine, brew } from './os/caffeine.js'
 import { initSimple, openSimple } from './os/simple.js'
 import { downloadCV } from './os/cvdoc.js'
+import { initAnalytics } from './os/analytics.js'
 import { toast } from './os/notify.js'
 import { startIncident } from './apps/bugsquash.js'
 import { shouldWelcome } from './apps/welcome.js'
@@ -45,6 +50,7 @@ const os = h('div', { class: 'os', id: 'os' }, h('canvas', { class: 'wallpaper',
 app.append(os)
 
 registerApps(apps)
+initAnalytics()
 initWindows(desktop)
 initSimple()
 initCaffeine()

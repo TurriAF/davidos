@@ -5,6 +5,7 @@ export const person = {
   name: 'David Aguilar Fernández',
   short: 'David',
   initials: 'DA',
+  photo: 'david.webp',
   role: { es: 'Desarrollador web junior', en: 'Junior web developer' },
   tagline: {
     es: 'Java, PHP, JavaScript y SQL, de la interfaz a la base de datos.',
@@ -14,7 +15,7 @@ export const person = {
   available: { es: 'Disponible', en: 'Available' },
   about: {
     es: 'Técnico Superior en Desarrollo de Aplicaciones Web y Técnico en Sistemas Microinformáticos y Redes. Me gusta entender cómo encaja cada pieza, del código al servidor, y resolver problemas con calma.',
-    en: 'Higher Technician in Web Application Development and Technician in Microcomputer Systems and Networks. I like understanding how every piece fits, from code to server, and solving problems calmly.',
+    en: 'Higher Vocational Degree in Web Application Development (DAW) and Vocational Diploma in Microcomputer Systems and Networks (SMR). I like understanding how every piece fits, from code to server, and solving problems calmly.',
   },
   email: 'david34512@gmail.com',
   linkedin: 'https://www.linkedin.com/in/david-aguilar-fern%C3%A1ndez-52836b248/',
@@ -108,7 +109,7 @@ export const timeline = [
   {
     id: 'daw', lane: 'main', kind: 'edu', tag: 'v2.0',
     org: 'Medac',
-    title: { es: 'Técnico Superior en Desarrollo de Aplicaciones Web', en: 'Higher Technician in Web Application Development' },
+    title: { es: 'Técnico Superior en Desarrollo de Aplicaciones Web', en: 'Higher Vocational Degree in Web Application Development (DAW)' },
     date: { es: 'sep 2023 – jun 2025', en: 'Sep 2023 – Jun 2025' },
     msg: { es: 'release: Técnico Superior en DAW', en: 'release: Web Application Development degree' },
     lines: {
@@ -130,7 +131,7 @@ export const timeline = [
   {
     id: 'smr', lane: 'main', kind: 'edu', tag: 'v1.0',
     org: { es: 'Grado Medio', en: 'Intermediate vocational degree' },
-    title: { es: 'Técnico en Sistemas Microinformáticos y Redes', en: 'Technician in Microcomputer Systems and Networks' },
+    title: { es: 'Técnico en Sistemas Microinformáticos y Redes', en: 'Vocational Diploma in Microcomputer Systems and Networks (SMR)' },
     date: { es: 'Grado Medio', en: 'Intermediate degree' },
     msg: { es: 'initial commit: Técnico en SMR', en: 'initial commit: Microcomputer Systems & Networks' },
     lines: { es: ['Soporte, equipos y redes'], en: ['Support, hardware and networks'] },

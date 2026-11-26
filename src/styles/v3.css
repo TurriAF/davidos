@@ -418,3 +418,45 @@
     margin-bottom: 2px;
   }
 }
+
+/* Foto (fondo transparente sobre degradado) */
+.readme-avatar,
+.login-avatar span {
+  overflow: hidden;
+  place-items: end center;
+}
+.readme-avatar img,
+.login-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+.login-avatar span {
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 35%, var(--panel)), var(--panel));
+}
+/* El borde animado cambia de color sin teñir la foto */
+.login-avatar {
+  position: relative;
+  animation: none;
+  background: none;
+}
+.login-avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(from 200deg, var(--accent), var(--accent2), var(--accent3), var(--accent));
+  animation: spinGlow 8s linear infinite;
+}
+.login-avatar span {
+  position: relative;
+}
+/* La etiqueta "recomendado" encima del título, sin taparlo */
+.login-badge {
+  position: static;
+  align-self: flex-start;
+  order: -1;
+  margin-bottom: 2px;
+}
