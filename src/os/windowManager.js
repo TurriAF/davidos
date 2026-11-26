@@ -157,6 +157,9 @@ export function focus(id) {
   const w = wins.get(id)
   if (!w) return
   if (+w.el.style.zIndex !== zTop) w.el.style.zIndex = ++zTop
+  // En móvil las ventanas ocupan toda la pantalla: solo una visible a la vez,
+  // así cerrar o minimizar vuelve al escritorio en vez de destapar otra ventana igual.
+  if (isMobile()) for (const [k, o] of wins) if (k !== id && !o.minimized) minimize(k)
   for (const [k, o] of wins) o.el.classList.toggle('focused', k === id)
   emit('windows')
 }

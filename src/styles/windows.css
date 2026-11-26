@@ -171,13 +171,16 @@
     min-width: 0;
   }
   .win-bar {
-    height: 46px;
+    height: calc(48px + env(safe-area-inset-top, 0px));
+    padding-top: env(safe-area-inset-top, 0px);
     cursor: default;
+    touch-action: manipulation;
   }
   .win-btn {
-    width: 40px;
-    height: 36px;
-    font-size: 20px;
+    width: 44px;
+    height: 40px;
+    font-size: 22px;
+    touch-action: manipulation;
   }
   .win-btn.max,
   .win-resize,
