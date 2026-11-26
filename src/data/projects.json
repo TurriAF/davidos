@@ -1,0 +1,88 @@
+[
+  {
+    "id": "aulacheck",
+    "name": "aulacheck",
+    "title": {
+      "es": "AulaCheck",
+      "en": "AulaCheck"
+    },
+    "desc": {
+      "es": "Gestor de instalaciones e incidencias para centros educativos, nacido de mi experiencia instalando pantallas interactivas en colegios. Registra incidencias por centro con prioridad y estado, permite filtrar y ordenar, y muestra un resumen. Incluye pruebas de la API.",
+      "en": "Installation and incident tracker for schools, born from my experience installing interactive displays. Logs incidents per school with priority and status, filters and sorts them, and shows a summary. Includes API tests."
+    },
+    "image": null,
+    "stack": [
+      "Node.js",
+      "Express",
+      "SQLite",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "github": "https://github.com/TurriAF/aulacheck",
+    "demo": null,
+    "status": "live"
+  },
+  {
+    "id": "movie-search",
+    "name": "movie-search",
+    "title": {
+      "es": "Buscador de películas",
+      "en": "Movie search"
+    },
+    "desc": {
+      "es": "Aplicación web para buscar películas.",
+      "en": "Web app to search for movies."
+    },
+    "image": null,
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "github": "https://github.com/TurriAF/movie-search",
+    "demo": "https://turriaf.github.io/movie-search/",
+    "status": "live"
+  },
+  {
+    "id": "portfolio",
+    "name": "portfolio",
+    "title": {
+      "es": "Portfolio",
+      "en": "Portfolio"
+    },
+    "desc": {
+      "es": "Mi web personal, creada con Astro, React y Tailwind.",
+      "en": "My personal website, built with Astro, React and Tailwind."
+    },
+    "image": null,
+    "stack": [
+      "Astro",
+      "React",
+      "Tailwind",
+      "TypeScript"
+    ],
+    "github": "https://github.com/TurriAF/portfolio",
+    "demo": null,
+    "status": "live"
+  },
+  {
+    "id": "pokeapi",
+    "name": "pokeapi",
+    "title": {
+      "es": "PokeApi",
+      "en": "PokeApi"
+    },
+    "desc": {
+      "es": "Aplicación web con la PokéAPI.",
+      "en": "Web app using the PokéAPI."
+    },
+    "image": null,
+    "stack": [
+      "PokéAPI"
+    ],
+    "github": null,
+    "demo": null,
+    "status": "wip"
+  }
+]

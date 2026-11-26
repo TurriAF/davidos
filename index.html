@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es" data-branch="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>DavidOS · David Aguilar Fernández</title>
+    <meta name="description" content="DavidOS: el portfolio de David Aguilar Fernández, desarrollador web junior (Java, PHP, JavaScript, SQL), en forma de sistema operativo." />
+    <meta name="theme-color" content="#0d0f14" />
+    <meta name="author" content="David Aguilar Fernández" />
+    <!-- Vista previa al compartir (LinkedIn, WhatsApp, X...). Cuando tengas dominio, pon la URL absoluta en og:image y og:url -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DavidOS · David Aguilar Fernández, desarrollador web junior" />
+    <meta property="og:description" content="Portfolio interactivo con forma de sistema operativo. Java, PHP, JavaScript y SQL. Disponible para incorporación inmediata." />
+    <meta property="og:image" content="./og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DavidOS · David Aguilar Fernández" />
+    <meta name="twitter:description" content="Portfolio interactivo con forma de sistema operativo. Desarrollador web junior." />
+    <meta name="twitter:image" content="./og.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Aguilar Fernández",
+        "jobTitle": "Desarrollador web junior",
+        "address": { "@type": "PostalAddress", "addressLocality": "Almería", "addressCountry": "ES" },
+        "sameAs": ["https://github.com/TurriAF"],
+        "knowsAbout": ["Java", "PHP", "JavaScript", "HTML", "CSS", "SQL", "MySQL", "XML", "Git"]
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  </head>
+  <body>
+    <a id="skip" class="skip" href="#simple">Saltar a la vista simple (CV) · Skip to simple view</a>
+    <div id="app"></div>
+    <div id="toasts" class="toasts" aria-live="polite"></div>
+    <section id="simple" class="simple" hidden aria-label="CV"></section>
+    <div id="print-cv" class="print-cv" aria-hidden="true"></div>
+    <!-- Netlify Forms: declaración estática del formulario de contacto (el visible lo pinta JS) -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input name="name" /><input name="email" /><input name="company" /><textarea name="message"></textarea><input name="bot-field" />
+    </form>
+    <noscript>
+      <div style="padding:24px;font-family:sans-serif;color:#eee;background:#0d0f14">
+        <h1>David Aguilar Fernández</h1>
+        <p>Desarrollador web junior · Java, PHP, JavaScript, SQL · Almería</p>
+        <p><a style="color:#b58cff" href="mailto:david34512@gmail.com">david34512@gmail.com</a> ·
+        <a style="color:#b58cff" href="https://www.linkedin.com/in/david-aguilar-fern%C3%A1ndez-52836b248/">LinkedIn</a> ·
+        <a style="color:#b58cff" href="https://github.com/TurriAF">GitHub</a></p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

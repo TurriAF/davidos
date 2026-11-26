@@ -1,0 +1,104 @@
+:root {
+  color-scheme: dark;
+  --bg: #0d0f14;
+  --bg2: #11141b;
+  --panel: #161a23;
+  --panel2: #1d2230;
+  --line: #2a3142;
+  --line2: #3a4358;
+  --text: #e8ebf3;
+  --muted: #8c95ab;
+  --faint: #5b6378;
+
+  /* rama main (desarrollo): violeta + cian + ámbar */
+  --accent: #b58cff;
+  --accent2: #5ce1e6;
+  --accent3: #ffc266;
+  --ok: #7ee787;
+  --err: #ff7b72;
+  --warn: #ffc266;
+
+  --dev: #b58cff;
+  --ops: #5ce1e6;
+  --fun: #ffc266;
+
+  --mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
+  --sans: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+
+  --r: 12px;
+  --shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.7), 0 2px 0 rgba(255, 255, 255, 0.03) inset;
+  --bar-h: 58px;
+}
+
+/* rama ops (sistemas): cian + verde, más fría */
+html[data-branch='ops'] {
+  --bg: #0a1013;
+  --bg2: #0e1518;
+  --panel: #121b1f;
+  --panel2: #18242a;
+  --line: #24343b;
+  --line2: #33484f;
+  --accent: #5ce1e6;
+  --accent2: #7ee787;
+  --accent3: #ffc266;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow: hidden;
+  transition: background 0.6s;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: 2px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+svg {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

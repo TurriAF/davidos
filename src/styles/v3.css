@@ -1,0 +1,420 @@
+/* ===== v3: lenguaje humano para RR. HH. ===== */
+
+/* Iconos: nombre humano + nombre técnico pequeño */
+.dicon-name {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.dicon-file {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--faint);
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: -3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.icons {
+  grid-template-rows: repeat(auto-fill, 104px) !important;
+}
+
+/* Ventanas: título humano + ruta atenuada; sin chip de rama */
+.win-file b {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.win-path {
+  color: var(--faint);
+  font-size: 11.5px;
+}
+.win-branch {
+  display: none;
+}
+
+/* Texto de entrada en las apps */
+.lead {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0;
+  max-width: 60ch;
+}
+.tb-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Interruptor "Ver como developer" */
+.devtgl {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--line2);
+  border-radius: 99px;
+  padding: 4px 12px 4px 5px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.devtgl:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+.devtgl-track {
+  width: 28px;
+  height: 16px;
+  border-radius: 99px;
+  background: var(--line2);
+  position: relative;
+  transition: background 0.2s;
+}
+.devtgl-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--text);
+  transition: transform 0.2s;
+}
+.devtgl.on {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--line2));
+}
+.devtgl.on .devtgl-track {
+  background: var(--accent);
+}
+.devtgl.on .devtgl-knob {
+  transform: translateX(12px);
+  background: #12101a;
+}
+
+/* Habilidades: tarjetas */
+.skillgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+  margin: 4px 0 14px;
+}
+.skillcard {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  background: color-mix(in srgb, var(--panel2) 55%, var(--panel));
+  border-top: 3px solid var(--c);
+}
+.skillcard.dev {
+  --c: var(--dev);
+}
+.skillcard.ops {
+  --c: var(--ops);
+}
+.skillcard h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.skillrow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 10px;
+  margin-bottom: 10px;
+}
+.skill-name {
+  font-weight: 600;
+  font-size: 14.5px;
+}
+.skill-lvl {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.skillrow .dep-bar {
+  grid-column: 1 / -1;
+}
+.skillcard.ops .dep-bar i {
+  background: var(--ops);
+}
+
+/* Experiencia: línea de tiempo */
+.tline {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0 0 0 22px;
+  position: relative;
+}
+.tline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--line2);
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 14px;
+}
+.tl-mark {
+  position: absolute;
+  left: -21px;
+  top: 16px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--panel);
+  border: 3px solid var(--dev);
+}
+.tl-item.ops .tl-mark {
+  border-color: var(--ops);
+}
+.tl-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--panel2) 50%, var(--panel));
+}
+.tl-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tl-kind {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--accent3) 16%, transparent);
+  color: var(--accent3);
+}
+.tl-kind.edu {
+  background: color-mix(in srgb, var(--ok) 15%, transparent);
+  color: var(--ok);
+}
+.tl-date {
+  font-size: 13px;
+  color: var(--muted);
+}
+.tl-title {
+  margin: 8px 0 2px;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+.tl-org {
+  margin: 0;
+  color: var(--accent2);
+  font-weight: 600;
+  font-size: 14px;
+}
+.tl-lines {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.tl-lines li {
+  margin: 2px 0;
+}
+
+/* Contacto */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0 6px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--panel2) 45%, var(--panel));
+}
+.contact-form .actions {
+  margin-top: 4px;
+}
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.fun-box {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px dashed var(--line2);
+  border-radius: 12px;
+}
+.fun-box .pipe {
+  margin: 4px 0 0;
+}
+.fun-box .toolbar {
+  margin-bottom: 8px;
+}
+
+/* Sobre mí: ficha rápida, por qué yo, idiomas */
+.quick {
+  margin: 18px 0 4px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  background: color-mix(in srgb, var(--accent) 7%, var(--panel));
+}
+.quick-title {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+.quick-dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 16px;
+  margin: 0;
+  font-size: 14.5px;
+}
+.quick-dl dt {
+  color: var(--muted);
+}
+.quick-dl dd {
+  margin: 0;
+  font-weight: 600;
+}
+.readme-h {
+  font-size: 16px;
+  margin: 22px 0 10px;
+  letter-spacing: -0.01em;
+}
+.why {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+.why-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  background: color-mix(in srgb, var(--panel2) 50%, var(--panel));
+}
+.why-n {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #12101a;
+  font-weight: 800;
+  font-size: 13px;
+}
+.why-card h3 {
+  margin: 8px 0 4px;
+  font-size: 15px;
+}
+.why-card p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.langs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.lang {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 14px;
+}
+.lang span {
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (max-width: 560px) {
+  .quick-dl {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .quick-dl dd {
+    margin-bottom: 6px;
+  }
+}
+
+/* Login */
+.login-title {
+  font-size: 21px;
+}
+.login-cmd {
+  font-size: 11.5px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+.login-note {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin: 14px 0 0;
+}
+
+/* Bienvenida */
+.wsteps {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wstep {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--panel2) 50%, var(--panel));
+}
+.wstep-ico {
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--accent);
+}
+.wstep-ico svg {
+  width: 20px;
+  height: 20px;
+}
+.wstep b {
+  font-size: 15px;
+}
+.wstep p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .login-badge {
+    position: static;
+    align-self: flex-start;
+    order: -1;
+    margin-bottom: 2px;
+  }
+}
