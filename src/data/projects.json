@@ -28,25 +28,26 @@
     "id": "movie-search",
     "name": "movie-search",
     "title": {
-      "es": "Buscador de películas",
-      "en": "Movie search"
+      "es": "Butaca · buscador de películas",
+      "en": "Butaca · movie finder"
     },
     "desc": {
-      "es": "Buscador de películas que consume la API de TMDB: muestra las populares, busca por título, abre una ficha con sinopsis y valoración, y guarda tus favoritas en el navegador (localStorage).",
-      "en": "Movie finder built on the TMDB API: shows popular titles, searches by name, opens a detail card with synopsis and rating, and saves your favourites in the browser (localStorage)."
+      "es": "Buscador de películas con la API de TMDB, rehecho desde cero: filtros por género, año y orden, búsqueda mientras escribes, ficha con tráiler, reparto y dónde verla en España, favoritas y URL compartible. JavaScript sin frameworks, con tests y despliegue automático.",
+      "en": "Movie finder built on the TMDB API, rebuilt from scratch: genre, year and sort filters, search-as-you-type, detail view with trailer, cast and where to watch in Spain, favourites and shareable URLs. Framework-free JavaScript with tests and automatic deployment."
     },
     "image": "movie-search.webp",
     "stack": [
       "JavaScript",
-      "HTML",
-      "CSS",
+      "Vite",
       "API REST",
-      "localStorage"
+      "Vitest",
+      "GitHub Actions",
+      "CSS"
     ],
     "github": "https://github.com/TurriAF/movie-search",
     "demo": "https://turriaf.github.io/movie-search/",
     "status": "live",
-    "updated": 1795704584436
+    "updated": 1795731983216
   },
   {
     "id": "portfolio",
